@@ -21,9 +21,7 @@ request({
         return;
     }
 
-    var VGfeed = JSON.parse(body);
-
-    VGfeed.some(function(item, key) {
+    JSON.parse(body).some(function(item, key) {
         if (key !== 0) {
             console.log('\n');
         }
