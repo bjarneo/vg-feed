@@ -33,7 +33,7 @@ request({
         }
 
         console.log(chalk.bold(item.title));
-        console.log(chalk.dim(item.published.niceformat));
+        console.log(chalk.dim(item.published.niceformat + ' - ' + item.persistentUrl));
         console.log(item.preamble);
     });
 });
