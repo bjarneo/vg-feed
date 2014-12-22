@@ -1,7 +1,7 @@
 VG Feed
 ==============
 
-Read VG (Verdens Gang) latest news in linux terminal window.
+Read VG (Verdens Gang) latest news in terminal window.
 
 ###Install:
 ```bash
@@ -13,7 +13,7 @@ npm install -g vg-feed
 vg-feed
 ```
 
-####Limit news items:
+###Limit news items:
 ```bash
 vg-feed -l 5
 ```
