@@ -1,6 +1,6 @@
 {
     "name": "vg-feed",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Read the latest VG news in terminal",
     "main": "index.js",
     "scripts": {
