@@ -23,7 +23,7 @@ request({
 
     var VGfeed = JSON.parse(body);
 
-    VGfeed.reverse().some(function(item, key) {
+    VGfeed.some(function(item, key) {
         if (key !== 0) {
             console.log('\n');
         }
