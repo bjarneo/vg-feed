@@ -23,10 +23,10 @@ describe('VGParser', function() {
         logs.push(input);
     };
 
-    it('Should iterate through json result and print the result', function() {
+    it('Should iterate through json result and print the response', function() {
         vgParser(null, res, json);
 
-        expect(String(logs[0])).to.be.equal('\u001b[1mtitle ftw\u001b[22m');
+        expect(logs[0]).to.be.equal('\u001b[1mtitle ftw\u001b[22m');
 
         expect(logs[1]).to.be.equal('\u001b[2m02.01.2015, 13:37 - http://iampersistent.no/123/\u001b[22m');
 
