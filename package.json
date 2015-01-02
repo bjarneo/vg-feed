@@ -1,10 +1,10 @@
 {
     "name": "vg-feed",
-    "version": "1.0.6",
+    "version": "1.1.6",
     "description": "Read the latest VG news in terminal",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "./node_modules/mocha/bin/mocha --reporter nyan test/*.js"
     },
     "bin": {
         "vg-feed": "./bin/vgfeed"
@@ -24,6 +24,10 @@
         "url": "https://github.com/bjarneo/vg-feed/issues"
     },
     "homepage": "https://github.com/bjarneo/vg-feed",
+    "devDependencies": {
+        "mocha": "2.1.0",
+        "chai": "1.10.0"
+    },
     "dependencies": {
         "request": "~2.51.0",
         "chalk": "^0.5.1",
