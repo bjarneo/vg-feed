@@ -1,13 +1,13 @@
 {
     "name": "vg-feed",
-    "version": "1.1.6",
+    "version": "2.0.0",
     "description": "Read the latest VG news in terminal",
     "main": "index.js",
-    "scripts": {
-        "test": "./node_modules/mocha/bin/mocha --reporter nyan test/*.js"
-    },
     "bin": {
         "vg-feed": "./bin/vgfeed"
+    },
+    "engines": {
+        "node": ">=7.6.0"
     },
     "repository": {
         "type": "git",
@@ -16,7 +16,9 @@
     "keywords": [
         "VG",
         "news",
-        "terminal"
+        "terminal",
+        "vg.no",
+        "vgno"
     ],
     "author": "Bjarne Oeverli",
     "license": "MIT",
@@ -24,13 +26,11 @@
         "url": "https://github.com/bjarneo/vg-feed/issues"
     },
     "homepage": "https://github.com/bjarneo/vg-feed",
-    "devDependencies": {
-        "mocha": "2.1.0",
-        "chai": "1.10.0"
-    },
+    "devDependencies": {},
     "dependencies": {
-        "request": "~2.51.0",
         "chalk": "^0.5.1",
-        "minimist": "~1.1.0"
+        "minimist": "~1.1.0",
+        "node-fetch": "^1.7.3",
+        "zero-pad": "^1.0.2"
     }
 }

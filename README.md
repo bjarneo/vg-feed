@@ -3,17 +3,22 @@ VG Feed
 
 Read VG (Verdens Gang) latest news in terminal window.
 
-###Install:
+![image](https://i.imgur.com/zn1ATtg.png)
+
+Install
+--
 ```bash
 npm install -g vg-feed
 ```
 
-###Usage:
+Usage
+---
 ```bash
 vg-feed
 ```
 
-###Limit news items:
+Limit news items
+---
 ```bash
-vg-feed -l 5
+vg-feed -l 3
 ```

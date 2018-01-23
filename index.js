@@ -1,10 +1,68 @@
 'use strict';
 
-var request = require('request'),
-    vgParser = require('./lib/vg-parser');
+const fetch = require('node-fetch');
+const chalk = require('chalk');
+const zeroPad = require('zero-pad');
+const argv = require('minimist')(process.argv.slice(2));
 
-request({
-    uri: 'http://www.vg.no/rss/feed/?format=json',
-    method: 'GET',
-    timeout: 2500
-}, vgParser);
+const log = console.log;
+
+// Set a default limit to 5.
+if (!argv.l) {
+    argv.l = 5;
+}
+
+function getDate() {
+    const d = new Date();
+
+    const date = zeroPad([
+        d.getDate(),
+        d.getMonth() + 1,
+        d.getFullYear()
+    ]).join('.');
+
+    const time = zeroPad([
+        d.getHours(),
+        d.getMinutes(),
+        d.getSeconds()
+    ]).join(':');
+
+    return date + ' ' + time;
+}
+
+function handleResponse(item, key) {
+    if (key !== 0) {
+        log('\n');
+    }
+
+    if (argv.l && +argv.l === key) {
+        return true;
+    }
+
+    const {
+        title,
+        published,
+        persistentUrl,
+        preamble
+    } = item;
+
+    log(' ' + chalk.bold(title));
+    log(' ' + chalk.dim(published.niceformat + ' - ' + persistentUrl));
+    log(' ' + preamble);
+}
+
+async function main() {
+    const data = await fetch('https://www.vg.no/rss/feed/?format=json');
+    const json = await data.json();
+
+    log(`\n VERDENS GANG - VG - https://www.vg.no - ${getDate()} \n`);
+
+    json.some(handleResponse);
+}
+
+try {
+    main();
+} catch (e) {
+    console.error('Something happened. Please try again.');
+    console.error(e);
+}
