@@ -55,7 +55,7 @@ async function main() {
     const data = await fetch('https://www.vg.no/rss/feed/?format=json');
     const json = await data.json();
 
-    log(`\n VERDENS GANG - VG - https://www.vg.no - ${getDate()} \n`);
+    log(`\n ${chalk.red('VG.no')} - https://www.vg.no - ${getDate()} \n`);
 
     json.some(handleResponse);
 }
