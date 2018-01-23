@@ -51,11 +51,15 @@ function handleResponse(item, key) {
     log(' ' + preamble);
 }
 
+function header() {
+    return '\n ' + chalk.white.bgRed.bold(` VG.no- https://www.vg.no - ${getDate()} `) + ' \n';
+}
+
 async function main() {
     const data = await fetch('https://www.vg.no/rss/feed/?format=json');
     const json = await data.json();
 
-    log(`\n ${chalk.red('VG.no')} - https://www.vg.no - ${getDate()} \n`);
+    log(header());
 
     json.some(handleResponse);
 }
