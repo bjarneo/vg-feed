@@ -14,11 +14,11 @@ npm install -g vg-feed
 Usage
 ---
 ```bash
-vg-feed
+vgno
 ```
 
 Limit news items
 ---
 ```bash
-vg-feed -l 3
+vgno -l 3
 ```
