@@ -3,7 +3,7 @@ VG Feed
 
 Read VG (Verdens Gang) latest news in terminal window.
 
-![image](https://i.imgur.com/zn1ATtg.png)
+![image](https://i.imgur.com/TTDo3Lv.png)
 
 Install
 --

@@ -52,7 +52,11 @@ function handleResponse(item, key) {
 }
 
 function header() {
-    return '\n ' + chalk.white.bgRed.bold(` VG.no- https://www.vg.no - ${getDate()} `) + ' \n';
+    return '\n ' + chalk.white.bgRed.bold(` VG.no - https://www.vg.no - ${getDate()} `) + ' \n';
+}
+
+function footer() {
+    return "\n " + chalk.white.bgBlack.bold(` Ans. redaktør og adm. direktør: Gard Steiro `) + " \n";
 }
 
 async function main() {
@@ -62,6 +66,8 @@ async function main() {
     log(header());
 
     json.some(handleResponse);
+
+    log(footer());
 }
 
 try {
