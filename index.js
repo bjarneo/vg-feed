@@ -56,7 +56,7 @@ function header() {
 }
 
 function footer() {
-    return "\n " + chalk.white.bgBlack.bold(` Ans. redaktør og adm. direktør: Gard Steiro `) + " \n";
+    return '\n ' + chalk.white.bgBlack.bold(' Ans. redaktør og adm. direktør: Gard Steiro ') + ' \n';
 }
 
 async function main() {
