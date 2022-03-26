@@ -30,7 +30,7 @@
     "devDependencies": {},
     "dependencies": {
         "chalk": "^2.3.0",
-        "minimist": "~1.1.0",
+        "minimist": "~1.2.6",
         "node-fetch": "^1.7.3",
         "zero-pad": "^1.0.2"
     }
